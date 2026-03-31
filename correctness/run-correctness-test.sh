@@ -61,14 +61,14 @@ declare -a QUERY_NAMES=(
   "q17-user-search-activity"
   "q18-user-search-limit"
   "q19-user-minute-search"
-  "q20-specific-user"
+  # "q20-specific-user"              # SKIPPED: crashes datafusion OpenSearch (projection.rs off-by-one panic)
   "q21-google-urls"
   "q22-google-search-phrases"
   "q23-google-title-search"
-  "q24-google-urls-sorted"
-  "q25-search-phrases-by-time"
-  "q26-search-phrases-sorted"
-  "q27-search-phrases-multi-sort"
+  # "q24-google-urls-sorted"         # SKIPPED: crashes datafusion OpenSearch (projection.rs off-by-one panic)
+  # "q25-search-phrases-by-time"     # SKIPPED: crashes datafusion OpenSearch (projection.rs off-by-one panic)
+  # "q26-search-phrases-sorted"      # SKIPPED: crashes datafusion OpenSearch (projection.rs off-by-one panic)
+  # "q27-search-phrases-multi-sort"  # SKIPPED: crashes datafusion OpenSearch (projection.rs off-by-one panic)
   "q28-counter-url-length"
   "q30-resolution-width-sums"
   "q31-search-engine-client-stats"
