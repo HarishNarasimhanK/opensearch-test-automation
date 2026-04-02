@@ -66,6 +66,8 @@ EXCLUDE_TASKS=""
 if [ "$ENGINE" = "datafusion" ]; then
   TEST_PROCEDURE="datafusion-ppl"
   EXCLUDE_TASKS="--exclude-tasks=q20-specific-user,q24-google-urls-sorted,q25-search-phrases-by-time,q26-search-phrases-sorted,q27-search-phrases-multi-sort"
+elif [ "$ENGINE" = "lucene" ]; then
+  TEST_PROCEDURE="dsl-clickbench-test"
 fi
 
 # --- Run benchmark ---

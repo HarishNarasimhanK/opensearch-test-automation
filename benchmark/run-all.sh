@@ -56,8 +56,8 @@ bash "$REPO_DIR/correctness/run-correctness-test.sh" "$DATAFUSION_HOST" "datafus
 # --- Lucene correctness test ---
 if [ -n "${LUCENE_HOST:-}" ]; then
   echo ""
-  echo ">>> Running Lucene correctness test..."
-  bash "$REPO_DIR/correctness/run-correctness-test.sh" "$LUCENE_HOST" "lucene" \
+  echo ">>> Running Lucene correctness test (DSL)..."
+  bash "$REPO_DIR/correctness/run-dsl-correctness-test.sh" "$LUCENE_HOST" "lucene" "$WORKLOAD_PATH_LUCENE/operations/dsl.json" \
     2>&1 | tee "$HOME/correctness-lucene.log"
 fi
 
